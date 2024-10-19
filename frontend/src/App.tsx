@@ -10,15 +10,17 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen p-4 lg:p-8 bg-gray-100">
-      {/* Markdown Editor */}
-      <MarkdownInput
-        markdown={markdown}
-        handleMarkdownChange={onMarkdownChange}
-      />
+    <div className="container">
+      <div className="editor-preview">
+        {/* Markdown Editor */}
+        <MarkdownInput
+          markdown={markdown}
+          handleMarkdownChange={onMarkdownChange}
+        />
 
-      {/* Html Preview */}
-      <HtmlPreview markdown={markdown} />
+        {/* Html Preview */}
+        <HtmlPreview markdown={markdown} />
+      </div>
     </div>
   );
 };
